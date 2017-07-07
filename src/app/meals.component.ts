@@ -21,7 +21,8 @@ import {Meal} from './meal-model.component'
     </form>
 
 
-  `
+  `,
+  styleUrls: ['./app.component.css']
 })
 
 export class MealComponent{

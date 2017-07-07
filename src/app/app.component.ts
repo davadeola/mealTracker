@@ -5,14 +5,14 @@ import {Meal} from './meal-model.component'
   template: `
   <div class="container">
     <h1>Meal Tracker</h1>
-    <h3><em>...track a your food lifestyle</em></h3>
+    <h4><em>...track your food lifestyle</em></h4>
 
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-6">
       <form class="form">
       <div class="form-group">
       <select (change)="onChange($event.target.value)" class="form-control">
-        <option value="all" selected="selected" >Select Calories</option>
+        <option value="all" selected="selected" >ALL</option>
         <option value="high-calorie">High Calories Foods</option>
         <option value="low-calorie">Low Calories Foods </option>
       </select>
@@ -23,7 +23,7 @@ import {Meal} from './meal-model.component'
 
 
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div *ngFor="let currentMeal of MealsArrey |comparecalories:selectedValue">
 
         <ul><pre>

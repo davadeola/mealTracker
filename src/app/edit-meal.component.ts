@@ -7,7 +7,7 @@ import {Meal} from './meal-model.component'
 
   <div *ngIf=selectedChildMeal>
   <h2>EDIT</h2>
-  <form class='form'>
+  <form class='form' id="form2">
     <div class="form-group">
       <label>What did you eat?</label>
       <input [(ngModel)]="selectedChildMeal.name" class=form-control placeholder="What did you eat?" name="name">
@@ -26,7 +26,8 @@ import {Meal} from './meal-model.component'
   </div>
 
 
-  `
+  `,
+  styleUrls: ['./app.component.css']
 })
 
 export class EditMealComponent{
@@ -35,7 +36,7 @@ export class EditMealComponent{
 
   finished(){
     this.editOutputSender.emit();
-    
+
   }
 
 
