@@ -1,15 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{MealModelComponent} from './meal-model.component'
+import {MealComponent} from './meals.component'
 import { AppComponent } from './app.component';
-
+import{FormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MealComponent
   ],
   imports: [
     BrowserModule,
-    MealModelComponent
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
