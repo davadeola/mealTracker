@@ -7,15 +7,15 @@ import {Meal} from './meal-model.component'
     <form class="form">
       <div class="form-group">
         <label>What meal did you eat?</label>
-        <input #name placeholder="What meal did you eat?" type="text" class="form-control">
+        <input #name placeholder="What meal did you eat?" type="text" class="form-control" required>
       </div>
         <div class="form-group">
           <label>Description?</label>
-          <input #details placeholder="Description?" type="text" class="form-control">
+          <input #details placeholder="Description?" type="text" class="form-control" required>
         </div>
         <div class="form-group">
           <label>Number of Calories</label>
-          <input #calories placeholder="Number of calories" type="number" class="form-control">
+          <input #calories placeholder="Number of calories" type="number" class="form-control" required>
         </div>
         <button class="btn btn-lg btn-info" (click)="addMeal(name.value, details.value, calories.value); ">SUBMIT</button>
     </form>

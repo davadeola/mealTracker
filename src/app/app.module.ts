@@ -4,11 +4,13 @@ import {MealComponent} from './meals.component'
 import { AppComponent } from './app.component';
 import{FormsModule} from '@angular/forms'
 import {EditMealComponent} from './edit-meal.component'
+import {CaloriesComparePipe} from './calories.pipe'
 @NgModule({
   declarations: [
     AppComponent,
     MealComponent,
-    EditMealComponent
+    EditMealComponent,
+    CaloriesComparePipe
   ],
   imports: [
     BrowserModule,
