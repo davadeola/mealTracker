@@ -33,12 +33,10 @@ import {Meal} from './meal-model.component'
 export class EditMealComponent{
 @Input () selectedChildMeal : Meal[];
 @Output () editOutputSender = new EventEmitter();
-
-  finished(){
-    this.editOutputSender.emit();
-
-  }
-
+selectedMealProp = null;
+finished(){
+  this.editOutputSender.emit(this.selectedMealProp)
+}
 
 
 }

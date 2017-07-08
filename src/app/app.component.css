@@ -14,15 +14,20 @@ select{
 
 h1, h2, h4{
   text-align: center;
-
+}
+ul{
+  text-align: center;
+  box-shadow: 2px 2px 2px 2px #879637;
 }
 
+
+
 h1{
- font-size: 9.75em;
+ font-size: 60px;
 }
 
 h4{
-  font-size: 2em;
+  font-size: 30px;
 }
 
 form{

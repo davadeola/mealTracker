@@ -8,6 +8,7 @@ import {Meal} from './meal-model.component'
     <h4><em>...track your food lifestyle</em></h4>
 
     <div class="row">
+    <h2 >Today you have eaten </h2>
       <div class="col-md-6">
       <form class="form">
       <div class="form-group">
@@ -19,19 +20,19 @@ import {Meal} from './meal-model.component'
       </div>
       </form>
         <meal (MealInputSender)="addNewMeal($event)"></meal>
-        <edit-meal [selectedChildMeal]="selectedMeal" (finished)="finished(selectedMeal)"></edit-meal>
+        <edit-meal [selectedChildMeal]="selectedMeal" (finished)="finished()"></edit-meal>
 
 
       </div>
       <div class="col-md-6">
         <div *ngFor="let currentMeal of MealsArrey |comparecalories:selectedValue">
 
-        <ul><pre>
-{{currentMeal.name}}
-{{currentMeal.details}}
-{{currentMeal.calories}}
+        <ul>
+<h3>{{currentMeal.name}}</h3><br>
+<p>{{currentMeal.details}}</p>
+<p>{{currentMeal.calories}}</p><br>
 <button (click)=startEdit(currentMeal) class="btn btn-md btn-warning">EDIT</button>
-            </pre>
+
           </ul>
 
         </div>
@@ -43,17 +44,17 @@ import {Meal} from './meal-model.component'
 })
 export class AppComponent {
   public selectedValue : string = "all"
-
-   MealsArrey : Meal[] =[];
+  public totalCalArray = [];
+   public MealsArrey : Meal[] =[];
    public selectedMeal: Meal = null;
-
+   public totalcalories: number= this.MealsArrey.length
 startEdit(mealToEdit : Meal){
   this.selectedMeal=mealToEdit;
   console.log(this.selectedMeal);
 }
 
-finished(selectedMeal){
-  this.selectedMeal=null;
+finished(){
+  this.selectedMeal =null;
   console.log(this.selectedMeal);
 }
 
@@ -64,4 +65,6 @@ finished(selectedMeal){
     this.selectedValue=selectedMenuValue;
     console.log(this.selectedValue);
   }
+
+
 }
